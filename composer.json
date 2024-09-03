@@ -1,0 +1,28 @@
+{
+    "name": "drei-d/laravel-xentral-orders-parser",
+    "description": "Parses Xentral order xml files",
+    "type": "library",
+    "version": "0.0.1",
+    "autoload": {
+        "psr-4": {
+            "DREID\\LaravelXentralOrdersParser\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Oliver Vollborn"
+        }
+    ],
+    "require": {
+        "php": "^8.2",
+        "laravel/framework": "^11",
+        "ext-simplexml": "*"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "DREID\\LaravelXentralOrdersParser\\Providers\\ServiceProvider"
+            ]
+        }
+    }
+}
