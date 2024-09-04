@@ -2,7 +2,7 @@
     "name": "drei-d/laravel-xentral-orders-parser",
     "description": "Parses Xentral order xml files",
     "type": "library",
-    "version": "0.0.2",
+    "version": "0.0.3",
     "autoload": {
         "psr-4": {
             "DREID\\LaravelXentralOrdersParser\\": "src/"
