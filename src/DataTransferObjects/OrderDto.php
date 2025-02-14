@@ -15,6 +15,7 @@ readonly class OrderDto
         public ?string $status,
         public ?string $kundennummer,
         public ?string $typ,
+        public ?string $firma,
         public ?string $titel,
         public ?string $name,
         public ?string $abteilung,
@@ -27,6 +28,7 @@ readonly class OrderDto
         public ?string $land,
         public ?string $email,
         public ?string $telefon,
+        public ?string $telefax,
         public ?string $versandart,
         public ?string $zahlungsweise,
         public ?Carbon $lieferdatum,
@@ -44,6 +46,8 @@ readonly class OrderDto
         public ?string $internebezeichnung,
         public ?string $sprache,
         public ?string $bundesland,
+        public ?string $ustid,
+        public ?string $kostenstelle,
         public array $positionen,
     ) {}
 }

@@ -35,10 +35,23 @@ class OrderParserService
         foreach ($auftrag->auftrag_position_list->auftrag_position as $position) {
             $positionen[] = new OrderItemDto(
                 $this->trim($position->bezeichnung),
+                $this->trim($position->name_de),
                 $this->trim($position->beschreibung),
                 $this->trim($position->internerkommentar),
                 $this->trim($position->nummer),
                 $this->trim($position->menge),
+                $this->trim($position->preis),
+                $this->trim($position->waehrung),
+                $this->trim($position->vpe),
+                $this->trim($position->einheit),
+                $this->trim($position->zolltarifnummer),
+                $this->trim($position->herkunftsland),
+                $this->trim($position->freifeld1),
+                $this->trim($position->freifeld2),
+                $this->trim($position->freifeld3),
+                $this->trim($position->ean),
+                $this->trim($position->gewicht),
+                $this->trim($position->kostenstelle),
             );
         }
 
@@ -51,6 +64,7 @@ class OrderParserService
             $this->trim($auftrag->status),
             $this->trim($auftrag->kundennummer),
             $this->trim($auftrag->typ),
+            $this->trim($auftrag->firma),
             $this->trim($auftrag->titel),
             $this->trim($auftrag->name),
             $this->trim($auftrag->abteilung),
@@ -63,6 +77,7 @@ class OrderParserService
             $this->trim($auftrag->land),
             $this->trim($auftrag->email),
             $this->trim($auftrag->telefon),
+            $this->trim($auftrag->telefax),
             $this->trim($auftrag->versandart),
             $this->trim($auftrag->zahlungsweise),
             $this->parseDate($auftrag->lieferdatum),
@@ -80,6 +95,8 @@ class OrderParserService
             $this->trim($auftrag->internebezeichnung),
             $this->trim($auftrag->sprache),
             $this->trim($auftrag->bundesland),
+            $this->trim($auftrag->ustid),
+            $this->trim($auftrag->kostenstelle),
             $positionen,
         );
     }
