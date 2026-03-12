@@ -2,7 +2,7 @@
 
 ## Requirements
 
-- Laravel 11
+- Laravel 11 or higher
 - PHP 8.2 or higher
 - ext-simplexml enabled
 
